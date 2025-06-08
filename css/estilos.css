@@ -1,0 +1,261 @@
+:root {
+  --modys-primary: #3baed4;
+  --modys-secondary: #1b3c6b;
+  --modys-accent: #e9c46a;
+}
+.bg-modys-primary {
+  background-color: var(--modys-primary) !important;
+}
+.bg-modys-secondary {
+  background-color: var(--modys-secondary) !important;
+}
+.text-modys-primary {
+  color: var(--modys-primary) !important;
+}
+.text-modys-secondary {
+  color: var(--modys-secondary) !important;
+}
+.cta-btn {
+  border-radius: 30px;
+  padding: 10px 30px;
+}
+.card-img-top,
+.img-fluid {
+  height: 180px;
+  object-fit: cover;
+}
+.card-img-top.staff-img {
+  height: 500px; /* Más pequeña que antes */
+  object-fit: contain; /* Así se verá entera aunque deje bandas */
+  object-position: center;
+  width: 100%;
+  background: #f5f5f5;
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+.servicio-card,
+.personal-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.servicio-card:hover,
+.personal-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 32px rgba(42, 157, 143, 0.2);
+}
+.btn-modys-primary {
+  background: var(--modys-primary);
+  color: #fff !important;
+  border-radius: 30px;
+  padding: 8px 28px;
+  transition: background 0.2s;
+  border: none;
+}
+.btn-modys-primary:hover {
+  background: #16305a;
+  color: #fff !important;
+}
+.nav-strong {
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  transition: color 0.2s, text-shadow 0.2s;
+}
+.nav-strong:hover,
+.nav-link.active {
+  color: var(--modys-accent) !important;
+  text-shadow: 0 2px 8px rgba(42, 157, 143, 0.15);
+}
+.btn-reserva-cita {
+  background: var(--modys-primary);
+  color: #fff !important;
+  border-radius: 50px;
+  padding: 10px 28px;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 12px rgba(42, 157, 143, 0.15);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.btn-reserva-cita:hover {
+  background: #21867a;
+  color: #fff !important;
+  box-shadow: 0 4px 24px rgba(42, 157, 143, 0.25);
+  text-decoration: none;
+}
+/* Mapa ocupa todo el alto de la tarjeta */
+.card-body.p-0 {
+    height: 100%;
+    min-height: 320px; /* Puedes ajustar la altura mínima */
+    padding: 0 !important;
+}
+.ratio.ratio-4x3 {
+    height: 100%;
+    min-height: 320px;
+}
+.ratio.ratio-4x3 iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 0.75rem;
+    display: block;
+}
+
+/* Animación sutil para la llamada a la acción */
+.animated-cta {
+  animation: pulse 2s infinite;
+  border-left: 6px solid var(--modys-secondary);
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(59,174,212,0.2);}
+  70% { box-shadow: 0 0 0 10px rgba(59,174,212,0);}
+  100% { box-shadow: 0 0 0 0 rgba(59,174,212,0);}
+}
+
+/* Mostrar la imagen completa y centrada en las tarjetas de servicios */
+.card-img-top {
+    height: 300px;              /* O la altura que prefieras */
+    object-fit: cover;          /* Ocupa todo el espacio, recortando si es necesario */
+    object-position: center;
+    width: 100%;
+    background: #f8f9fa;
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+}
+.bg-nutricionista {
+    background-color: #8e44ad !important; /* Morado vibrante */
+    color: white;
+}
+
+.personal-modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Posición fija para que se quede en su sitio al scrollear */
+    z-index: 1000; /* Asegura que esté por encima de todo */
+    top: 50%;       /* Centrado vertical */
+    left: 50%;      /* Centrado horizontal */
+    transform: translate(-50%, -50%); /* Ajuste fino para centrar */
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Habilita el scroll si el contenido es muy largo */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
+}
+.personal-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Centrado vertical y horizontal */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ancho del modal */
+    max-width: 600px; /* Ancho máximo */
+    position: relative; /* Para posicionar el botón de cerrar */
+}
+
+.personal-modal-close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.personal-modal-close:hover,
+.personal-modal-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.personal-modal-img {
+    width: 100%;
+    max-height: 580px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.personal-modal-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.personal-modal-description {
+    font-size: 16px;
+}
+.personal-hover {
+    display: none; /* Oculta la descripción corta en la tarjeta */
+}
+
+/* Estilo para el botón toggler en modo móvil */
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5); /* Borde blanco semitransparente */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Efecto gris en el header cuando hover en dropdown */
+.navbar .dropdown:hover ~ header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(240, 240, 240, 0.6); /* gris clarito con transparencia */
+    z-index: 2; /* por encima de la imagen, pero debajo del texto */
+    transition: all 0.3s ease;
+}
+
+/* Ajustamos el header para que tenga position: relative */
+header {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Mega menu 3x3 centrado bonito */
+.navbar .mega-dropdown {
+    width: 750px; /* un poco más ancho */
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas fijas */
+    grid-auto-rows: auto;
+    gap: 1rem;
+    background: rgba(240, 240, 240, 0.95); /* gris claro con un pelín de opacidad */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    margin: 0 auto; /* centrado horizontal */
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 10px);
+}
+
+.navbar .dropdown:hover .mega-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+    z-index: 3;
+}
+
+/* Estilo de las cajas */
+.navbar .mega-dropdown .dropdown-item {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #333;
+    border-radius: 8px;
+    text-align: center;
+    padding: 0.75rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .mega-dropdown .dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    color: #0d6efd;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+}

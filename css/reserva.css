@@ -1,0 +1,93 @@
+      .form-control.is-invalid {
+            border-color: #dc3545;
+            padding-right: calc(1.5em + .75rem);
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5' stroke-width='1'/><path stroke-linecap='round' d='M5.8 3.698V7.5m0 2v-2'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right calc(.375em + .1875rem) center;
+            background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+        }
+        .form-control.is-valid {
+            border-color: #198754;
+            padding-right: calc(1.5em + .75rem);
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.4-2.1 1.4-1.7l1.197.334L6.4 3c.4-1.04 1.63-.86 1.4.33l-5.81 6.08c-.2.08-.42-.15-.28-.32z'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right calc(.375em + .1875rem) center;
+            background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+        }
+        .invalid-feedback {
+            display: none;
+            width: 100%;
+            margin-top: .25rem;
+            font-size: .875em;
+            color: #dc3545;
+        }
+        .is-invalid + .invalid-feedback {
+            display: block;
+        }
+
+
+        /* Efecto hover en los enlaces de navegación (más fuerte) */
+.navbar-nav .nav-link:hover {
+    color: #f8f9fa !important; /* Cambia a blanco al pasar el ratón */
+    background-color: rgba(255, 255, 255, 0.1); /* Ligero fondo blanco */
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Efecto hover en el botón de "Reservar Cita" (más fuerte) */
+.btn-reserva-cita:hover {
+    background-color: #0a6b38 !important; /* Tono de verde aún más oscuro */
+    transform: scale(1.1); /* Escala un poco más */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Añade una ligera sombra */
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Opcional: Efecto hover en el botón de contacto del CTA (más fuerte) */
+.animated-cta .btn-modys-primary:hover {
+    background-color: #003366 !important; /* Tono de azul más oscuro */
+    transform: translateY(-2px) scale(1.05); /* Se eleva ligeramente y escala */
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15); /* Añade una ligera sombra */
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/*Mas responsive*/
+@media (max-width: 768px) {
+    .btn-reserva-cita {
+        width: 100%; /* Botón ocupa todo el ancho en pantallas pequeñas */
+        padding: 12px; /* Aumenta el padding para mejor usabilidad */
+        font-size: 1.2rem; /* Aumenta el tamaño de fuente */
+    }
+    .navbar-nav .nav-link {
+        font-size: 1.1rem; /* Aumenta el tamaño de fuente de los enlaces */
+    }
+}
+        .animated-cta {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-color: #f8f9fa; /* Fondo claro */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        
+        .animated-cta:hover {
+            transform: translateY(-5px); /* Eleva el CTA al pasar el ratón */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Añade una sombra más pronunciada */
+        }
+        
+        .animated-cta h2 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            color: #333; /* Color del texto */
+        }
+        
+        .animated-cta p {
+            margin-bottom: 20px;
+            color: #666; /* Color del texto secundario */
+        }
+        
+        .animated-cta .btn-modys-primary {
+            margin-top: 10px; /* Espacio entre el texto y el botón */
+        }

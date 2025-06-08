@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fisioterapia Pediátrica - Clínica Modys</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/estilos.css" rel="stylesheet">
+    <style>
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeInUp 1s forwards;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+        .card-hover:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 16px 48px 0 rgba(160, 233, 255, 0.18), 0 2px 8px 0 rgba(160, 255, 195, 0.13);
+            transition: all 0.3s;
+        }
+        .icon-anim {
+            animation: bounce 1.2s infinite alternate;
+        }
+        @keyframes bounce {
+            to { transform: translateY(-10px);}
+        }
+        .bg-gradient-fisio {
+            background: linear-gradient(120deg, #a1ffce 0%, #faffd1 100%);
+        }
+        .section-shadow-fisio {
+            box-shadow: 0 16px 56px 0 rgba(160, 233, 255, 0.13), 0 2px 8px 0 rgba(160, 255, 195, 0.10);
+            border-radius: 2rem;
+            background: #fff;
+        }
+        .wave {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-modys-secondary fixed-top shadow">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2 text-white fw-bold" href="index.html">
+            <img src="img/logo/LOGO.jpg" alt="Logo Clínica Modys" style="height:50px; width:100px; object-fit:contain;">
+            Clínica Modys
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                <li class="nav-item">
+                    <a class="nav-link nav-strong text-white" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-strong text-white" href="servicios.html">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-strong text-white" href="personal.html">Nuestro Personal</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-strong text-white" href="contacto.html">Contacto</a>
+                </li>
+                <li class="nav-item ms-lg-3">
+                    <a class="btn btn-reserva-cita fw-bold rounded-pill px-4 py-2 d-flex align-items-center justify-content-center"
+                       href="reserva.html">Reservar Cita</a>
+                </li>
+                <li class="nav-item ms-lg-2 mt-3 mt-lg-0">
+                    <a class="btn btn-reserva-cita fw-bold rounded-pill px-4 py-2 d-flex align-items-center justify-content-center"
+                       href="https://wa.me/34602528124"
+                       target="_blank"
+                       aria-label="WhatsApp"
+                       style="background-color: #25D366; color: #fff; font-size: 1rem;">
+                        <i class="bi bi-whatsapp me-2"></i> 602 528 124
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <header class="text-white text-center d-flex align-items-center position-relative bg-gradient-fisio"
+        style="min-height: 60vh; background: url('img/fisio-pediatrica.jpg') center/cover no-repeat;">
+        <div style="position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.18); z-index:1;"></div>
+        <div class="container py-5 position-relative" style="z-index:2;">
+            <h1 class="display-3 fw-bold mb-3 fade-in-up">Fisioterapia Pediátrica</h1>
+            <p class="lead mb-4 fade-in-up" style="animation-delay:0.2s;">Cuidamos el desarrollo y la salud de los más pequeños con tratamientos especializados y mucho cariño.</p>
+            <a href="reserva.html" class="btn btn-success btn-lg fw-bold mt-3 fade-in-up" style="animation-delay:0.4s;">Reserva tu cita</a>
+        </div>
+        <svg class="wave" viewBox="0 0 1440 80"><path fill="#fff" fill-opacity="1" d="M0,64L48,58.7C96,53,192,43,288,53.3C384,64,480,96,576,106.7C672,117,768,107,864,101.3C960,96,1056,96,1152,90.7C1248,85,1344,75,1392,69.3L1440,64L1440,80L1392,80C1344,80,1248,80,1152,80C1056,80,960,80,864,80C768,80,672,80,576,80C480,80,384,80,288,80C192,80,96,80,48,80L0,80Z"></path></svg>
+    </header>
+
+    <section class="container py-5">
+        <div class="row align-items-center section-shadow-fisio p-4 fade-in-up" style="animation-delay:0.6s;">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <h2 class="text-modys-secondary fw-bold">¿Qué es la fisioterapia pediátrica?</h2>
+                <p>
+                    Es una especialidad dedicada a la prevención, diagnóstico y tratamiento de alteraciones del movimiento y desarrollo en bebés, niños y adolescentes. En Modys, trabajamos con un enfoque lúdico y personalizado para cada peque.
+                </p>
+                <ul>
+                    <li>Retrasos motores y alteraciones del desarrollo</li>
+                    <li>Parálisis cerebral, síndromes genéticos y neurológicos</li>
+                    <li>Problemas ortopédicos y respiratorios</li>
+                    <li>Atención temprana y estimulación</li>
+                </ul>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="img/fisio-pediatrica.jpg" class="img-fluid rounded shadow-lg" alt="Fisioterapia Pediátrica" style="max-height:350px;object-fit:cover;">
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light py-5">
+        <div class="container">
+            <h3 class="text-center mb-4 text-modys-secondary fade-in-up" style="animation-delay:1s;">¿Cómo ayudamos a tu peque?</h3>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4 fade-in-up" style="animation-delay:1.2s;">
+                    <div class="card h-100 shadow-lg border-0 card-hover" style="background:linear-gradient(120deg,#a1ffce 0%,#faffd1 100%);">
+                        <div class="card-body text-center">
+                            <i class="bi bi-balloon icon-anim display-4 text-success mb-3"></i>
+                            <h5 class="card-title">Terapia divertida</h5>
+                            <p class="card-text">Sesiones lúdicas y adaptadas para que los niños disfruten y progresen.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in-up" style="animation-delay:1.4s;">
+                    <div class="card h-100 shadow-lg border-0 card-hover" style="background:linear-gradient(120deg,#faffd1 0%,#a1ffce 100%);">
+                        <div class="card-body text-center">
+                            <i class="bi bi-activity icon-anim display-4 text-warning mb-3"></i>
+                            <h5 class="card-title">Desarrollo y autonomía</h5>
+                            <p class="card-text">Favorecemos la independencia y el desarrollo motor de cada peque.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in-up" style="animation-delay:1.6s;">
+                    <div class="card h-100 shadow-lg border-0 card-hover" style="background:linear-gradient(120deg,#a1ffce 0%,#faffd1 100%);">
+                        <div class="card-body text-center">
+                            <i class="bi bi-emoji-smile icon-anim display-4 text-info mb-3"></i>
+                            <h5 class="card-title">Acompañamiento familiar</h5>
+                            <p class="card-text">Implicamos a la familia en el proceso para lograr los mejores resultados.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center fade-in-up section-shadow-fisio p-4" style="animation-delay:1.8s;">
+                <h3 class="mb-4 text-modys-secondary">¡Juntos por el bienestar de tu peque!</h3>
+                <p class="lead">En Modys, la fisioterapia pediátrica es cercana, profesional y llena de ilusión. ¿Hablamos?</p>
+                <a href="contacto.html" class="btn btn-success btn-lg mt-3">Contacta con nosotros</a>
+            </div>
+        </div>
+    </section>
+
+     
+   <footer class="bg-modys-secondary text-white text-center py-4 mt-5">
+    <div class="container">
+        <div class="row align-items-center mb-3">
+            <div class="col-md-4 mb-3 mb-md-0 text-md-start text-center">
+                <a href="index.html" class="navbar-brand d-inline-flex align-items-center gap-2 text-white fw-bold mb-2" style="font-size:1.3rem;">
+                    <img src="img/logo/LOGO.jpg" alt="Logo Clínica Modys" style="height:38px; width:75px; object-fit:contain;">
+                    Clínica Modys
+                </a>
+                <div class="mt-2 small">
+                    <i class="bi bi-geo-alt-fill me-1"></i> Molina de Segura, Murcia<br>
+                    <i class="bi bi-envelope-fill me-1"></i> info@clinicamodys.es<br>
+                    <i class="bi bi-telephone-fill me-1"></i> 602 528 124
+                </div>
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0">
+                <h6 class="fw-bold mb-3">Enlaces útiles</h6>
+                <ul class="list-unstyled mb-0">
+                    <li><a href="servicios.html" class="text-white text-decoration-underline">Servicios</a></li>
+                    <li><a href="personal.html" class="text-white text-decoration-underline">Nuestro Personal</a></li>
+                    <li><a href="reserva.html" class="text-white text-decoration-underline">Reservar Cita</a></li>
+                    <li><a href="contacto.html" class="text-white text-decoration-underline">Contacto</a></li>
+                    <li><a href="politica-privacidad.html" class="text-white-50 text-decoration-underline small">Política de Privacidad</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 text-md-end text-center">
+                <h6 class="fw-bold mb-3">Síguenos</h6>
+                <a href="https://www.instagram.com/modys_deporteysalud/?hl=es" target="_blank" class="text-white me-2 fs-4" aria-label="Instagram">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/Cl%C3%ADnica-Modys-102626885646688" target="_blank" class="text-white me-2 fs-4" aria-label="Facebook">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a href="https://wa.me/34602528124" target="_blank" class="text-white fs-4" aria-label="WhatsApp">
+                    <i class="bi bi-whatsapp"></i>
+                </a>
+                <div class="mt-3">
+                    <a href="contacto.html" class="btn btn-warning btn-sm fw-bold rounded-pill px-4 py-2 d-inline-flex align-items-center">
+                        <i class="bi bi-envelope-paper me-2"></i> Contacta con nosotros
+                    </a>
+                </div>
+            </div>
+        </div>
+        <hr class="border-light opacity-25 my-3">
+        <div class="small text-white-50">
+            &copy; 2025 Clínica Modys. Todos los derechos reservados. | <a href="politica-privacidad.html" class="text-white-50 text-decoration-underline">Política de Privacidad</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

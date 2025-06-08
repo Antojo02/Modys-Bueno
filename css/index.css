@@ -1,0 +1,28 @@
+/*ANIMACIONES Y EFECTOS*/
+/* Efecto hover para los botones del Hero */
+.cta-btn {
+    border-radius: 30px;
+    padding: 10px 30px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Añadimos transiciones */
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px); /* Eleva el botón ligeramente */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Añade una sombra */
+}
+
+.btn-light.cta-btn:hover {
+    background-color: #f8f9fa; /* Mantiene el fondo claro */
+}
+
+.btn-outline-light.cta-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Ligero fondo al pasar el ratón */
+    border-color: #f8f9fa;
+    color: #fff;
+}
+
+.btn-warning.cta-btn:hover {
+    background-color: #c69500; /* Tono de amarillo más oscuro */
+    color: #fff;
+}
+
