@@ -1,0 +1,86 @@
+/* ==========================
+   Variables globales
+   ========================== */
+:root {
+  --color-embarazo-primario: #fbc2eb;
+  --color-embarazo-secundario: #fcdffb;
+  --color-embarazo-terciario: #fffde4;
+  --color-blanco: #fff;
+  --color-texto: #222;
+  --color-modys-secondary: #64b3f4;
+  --color-pink-btn: #a14b7b;
+  --sombra-principal: 0 16px 48px 0 rgba(255, 195, 160, 0.18), 0 2px 8px 0 rgba(255, 255, 200, 0.13);
+  --sombra-section: 0 16px 56px 0 rgba(255, 195, 160, 0.13), 0 2px 8px 0 rgba(255, 255, 200, 0.10);
+  --radio-borde: 2rem;
+}
+
+/* ==========================
+   Animaciones y utilidades
+   ========================== */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.icon-anim {
+  animation: bounce 1.2s infinite alternate;
+}
+
+@keyframes bounce {
+  to { transform: translateY(-10px);}
+}
+
+/* ==========================
+   Tarjetas y efectos hover
+   ========================== */
+.card-hover:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: var(--sombra-principal);
+  transition: all 0.3s;
+}
+
+/* ==========================
+   Fondos y secciones
+   ========================== */
+.bg-gradient-embarazo {
+  background: linear-gradient(120deg, var(--color-embarazo-primario) 0%, var(--color-embarazo-secundario) 100%);
+}
+
+.section-shadow-embarazo {
+  box-shadow: var(--sombra-section);
+  border-radius: var(--radio-borde);
+  background: var(--color-blanco);
+}
+
+/* ==========================
+   Botón personalizado
+   ========================== */
+.btn-pink {
+  background: var(--color-embarazo-primario);
+  color: var(--color-pink-btn);
+  border: none;
+}
+.btn-pink:hover, .btn-pink:focus {
+  background: var(--color-embarazo-secundario);
+  color: var(--color-pink-btn);
+}
+
+/* ==========================
+   Otros estilos
+   ========================== */
+.wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 2;
+}
