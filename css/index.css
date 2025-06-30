@@ -1,58 +1,52 @@
-/*ANIMACIONES Y EFECTOS*/
+/* ==========================
+   CSS ESPECÍFICO PARA INDEX
+   ========================== */
+
+/* VARIABLES GLOBALES SOLO PARA INDEX */
+:root {
+    --color-fondo-index: #f8fafc;
+    --color-btn-hover: #c69500;
+    --color-btn-light: #f8f9fa;
+    --color-modal-bg: rgba(34, 46, 60, 0.85);
+    --color-modal-shadow: 0 8px 32px rgba(25, 118, 210, 0.10);
+    --borde-radius-btn: 30px;
+    --borde-radius-modal: 1rem;
+}
+
+/* ==========================
+   ANIMACIONES Y EFECTOS
+   ========================== */
+
 /* Efecto hover para los botones del Hero */
 .cta-btn {
-    border-radius: 30px;
+    border-radius: var(--borde-radius-btn);
     padding: 10px 30px;
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Añadimos transiciones */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .cta-btn:hover {
-    transform: translateY(-3px); /* Eleva el botón ligeramente */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Añade una sombra */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .btn-light.cta-btn:hover {
-    background-color: #f8f9fa; /* Mantiene el fondo claro */
+    background-color: var(--color-btn-light);
 }
 
 .btn-outline-light.cta-btn:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Ligero fondo al pasar el ratón */
-    border-color: #f8f9fa;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: var(--color-btn-light);
     color: #fff;
 }
 
 .btn-warning.cta-btn:hover {
-    background-color: #c69500; /* Tono de amarillo más oscuro */
+    background-color: var(--color-btn-hover);
     color: #fff;
 }
 
+/* ==========================
+   FONDO GENERAL DEL INDEX
+   ========================== */
 body {
-    background: #f8fafc !important;
+    background: var(--color-fondo-index) !important;
 }
-
-.personal-modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    top: 0; left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(34, 46, 60, 0.85);
-    justify-content: center;
-    align-items: center;
-}
-
-.personal-modal.active {
-    display: flex !important;
-}
-
-.personal-modal-content {
-    background-color: #fff;
-    margin: 0 auto;
-    padding: 24px;
-    border-radius: 1rem;
-    max-width: 500px;
-    width: 90%;
-    box-shadow: 0 8px 32px rgba(25, 118, 210, 0.10);
-}
-

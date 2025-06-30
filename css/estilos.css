@@ -33,12 +33,10 @@
   border-top-left-radius: 0.75rem;
   border-top-right-radius: 0.75rem;
 }
-.servicio-card,
-.personal-card {
+.servicio-card {
   transition: transform 0.3s, box-shadow 0.3s;
 }
-.servicio-card:hover,
-.personal-card:hover {
+.servicio-card:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 32px rgba(42, 157, 143, 0.2);
 }
@@ -110,8 +108,8 @@
 
 /* Mostrar la imagen completa y centrada en las tarjetas de servicios */
 .card-img-top {
-    height: 300px;              /* O la altura que prefieras */
-    object-fit: cover;          /* Ocupa todo el espacio, recortando si es necesario */
+    height: 300px;
+    object-fit: cover;
     object-position: center;
     width: 100%;
     background: #f8f9fa;
@@ -119,71 +117,13 @@
     border-top-right-radius: 0.75rem;
 }
 .bg-nutricionista {
-    background-color: #8e44ad !important; /* Morado vibrante */
+    background-color: #8e44ad !important;
     color: white;
-}
-
-.personal-modal {
-    display: none; /* Oculto por defecto */
-    position: fixed; /* Posición fija para que se quede en su sitio al scrollear */
-    z-index: 1000; /* Asegura que esté por encima de todo */
-    top: 50%;       /* Centrado vertical */
-    left: 50%;      /* Centrado horizontal */
-    transform: translate(-50%, -50%); /* Ajuste fino para centrar */
-    width: 100%;
-    height: 100%;
-    overflow: auto; /* Habilita el scroll si el contenido es muy largo */
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
-}
-.personal-modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* Centrado vertical y horizontal */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Ancho del modal */
-    max-width: 600px; /* Ancho máximo */
-    position: relative; /* Para posicionar el botón de cerrar */
-}
-
-.personal-modal-close {
-    color: #aaa;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.personal-modal-close:hover,
-.personal-modal-close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.personal-modal-img {
-    width: 100%;
-    max-height: 580px;
-    object-fit: cover;
-    margin-bottom: 15px;
-}
-
-.personal-modal-title {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.personal-modal-description {
-    font-size: 16px;
-}
-.personal-hover {
-    display: none; /* Oculta la descripción corta en la tarjeta */
 }
 
 /* Estilo para el botón toggler en modo móvil */
 .navbar-toggler {
-    border-color: rgba(255, 255, 255, 0.5); /* Borde blanco semitransparente */
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 .navbar-toggler-icon {
@@ -198,8 +138,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(240, 240, 240, 0.6); /* gris clarito con transparencia */
-    z-index: 2; /* por encima de la imagen, pero debajo del texto */
+    background: rgba(240, 240, 240, 0.6);
+    z-index: 2;
     transition: all 0.3s ease;
 }
 
@@ -211,20 +151,20 @@ header {
 
 /* Mega menu 3x3 centrado bonito */
 .navbar .mega-dropdown {
-    width: 750px; /* un poco más ancho */
+    width: 750px;
     padding: 1.5rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas fijas */
+    grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: auto;
     gap: 1rem;
-    background: rgba(240, 240, 240, 0.95); /* gris claro con un pelín de opacidad */
+    background: rgba(240, 240, 240, 0.95);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     border-radius: 12px;
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
     transition: all 0.3s ease;
-    margin: 0 auto; /* centrado horizontal */
+    margin: 0 auto;
     position: absolute;
     left: 50%;
     transform: translate(-50%, 10px);

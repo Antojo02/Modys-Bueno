@@ -1,0 +1,49 @@
+  
+        body {
+            background: #f8fafc;
+        }
+        .privacidad-card {
+            max-width: 900px;
+            margin: 48px auto 32px auto;
+            background: #fff;
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px rgba(25, 118, 210, 0.10);
+            padding: 2.5rem 2rem;
+            border: 2px solid var(--modys-primary);
+        }
+        h1, h2, h3 {
+            color: var(--modys-primary);
+        }
+        h1 {
+            font-weight: 800;
+            border-bottom: 3px solid var(--modys-accent);
+            display: inline-block;
+            padding-bottom: 0.3rem;
+        }
+        h2 {
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            font-weight: 700;
+        }
+        .btn-modys {
+            background: var(--modys-primary);
+            color: #fff;
+            border-radius: 2rem;
+            font-weight: 600;
+            border: none;
+        }
+        .btn-modys:hover {
+            background: var(--modys-secondary);
+            color: var(--modys-accent);
+        }
+        .privacidad-card ul {
+            list-style: disc inside;
+        }
+        @media (max-width: 600px) {
+            .privacidad-card {
+                padding: 1.2rem 0.5rem;
+            }
+            h1 {
+                font-size: 1.7rem;
+            }
+        }
