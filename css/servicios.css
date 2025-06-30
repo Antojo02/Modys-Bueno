@@ -12,6 +12,23 @@
   --sombra-principal: 0 16px 48px 0 rgba(255, 195, 160, 0.18), 0 2px 8px 0 rgba(255, 255, 200, 0.13);
   --sombra-section: 0 16px 56px 0 rgba(255, 195, 160, 0.13), 0 2px 8px 0 rgba(255, 255, 200, 0.10);
   --radio-borde: 2rem;
+
+  /* Fuentes */
+  --fuente-principal: 'Open Sans', Arial, Helvetica, sans-serif;
+  --fuente-header: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+/* ==========================
+   Tipografía global
+   ========================== */
+body {
+  font-family: var(--fuente-principal);
+  color: var(--color-texto);
+  background: var(--color-blanco);
+}
+
+h1, h2, h3, h4, h5, h6, .header, .navbar-brand {
+  font-family: var(--fuente-header);
 }
 
 /* ==========================
@@ -67,6 +84,7 @@
   background: var(--color-embarazo-primario);
   color: var(--color-pink-btn);
   border: none;
+  font-family: var(--fuente-header);
 }
 .btn-pink:hover, .btn-pink:focus {
   background: var(--color-embarazo-secundario);

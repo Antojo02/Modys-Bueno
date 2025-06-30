@@ -2,6 +2,9 @@
   --modys-primary: #3baed4;
   --modys-secondary: #1b3c6b;
   --modys-accent: #e9c46a;
+  /* Fuentes */
+  --fuente-principal: 'Open Sans', Arial, Helvetica, sans-serif;
+  --fuente-header: 'Inter', Arial, Helvetica, sans-serif;
 }
 .bg-modys-primary {
   background-color: var(--modys-primary) !important;

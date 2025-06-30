@@ -11,6 +11,10 @@
     --color-modal-shadow: 0 8px 32px rgba(25, 118, 210, 0.10);
     --borde-radius-btn: 30px;
     --borde-radius-modal: 1rem;
+
+    /* Fuentes */
+  --fuente-principal: 'Open Sans', Arial, Helvetica, sans-serif;
+  --fuente-header: 'Inter', Arial, Helvetica, sans-serif;
 }
 
 /* ==========================
