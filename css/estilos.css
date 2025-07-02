@@ -1,22 +1,23 @@
 :root {
-  --modys-primary: #3baed4;
+  --modys-primary: #40C1AC;
   --modys-secondary: #1b3c6b;
   --modys-accent: #e9c46a;
   /* Fuentes */
   --fuente-principal: 'Open Sans', Arial, Helvetica, sans-serif;
   --fuente-header: 'Inter', Arial, Helvetica, sans-serif;
+  --color-primario: #40C1AC;
 }
 .bg-modys-primary {
   background-color: var(--modys-primary) !important;
 }
 .bg-modys-secondary {
-  background-color: var(--modys-secondary) !important;
+  background-color: var(--color-primario) !important;
 }
 .text-modys-primary {
   color: var(--modys-primary) !important;
 }
 .text-modys-secondary {
-  color: var(--modys-secondary) !important;
+  color: var(--color-primario) !important;
 }
 .cta-btn {
   border-radius: 30px;
@@ -201,4 +202,40 @@ header {
     color: #0d6efd;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
     transform: scale(1.05);
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem; /* Tamaño uniforme */
+    padding: 0.75rem 1rem; /* Espaciado uniforme */
+    font-weight: 500;
+}
+
+.navbar-nav .btn-reserva-cita {
+    font-size: 1rem; /* Igual tamaño de texto que nav-link */
+    padding: 0.6rem 1.2rem;
+    white-space: nowrap;
+}
+
+.navbar-nav .nav-item .btn-reserva-cita {
+    margin-top: 0.3rem; /* Ajusta alineación con links */
+    margin-bottom: 0.3rem;
+}
+
+.navbar-nav .nav-item .btn-whatsapp {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #25D366;
+    color: #fff;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    border: none;
+    text-decoration: none;
+}
+
+.navbar-nav .nav-item .btn-whatsapp:hover {
+    background-color: #1ebe5d;
+    color: #fff;
 }
