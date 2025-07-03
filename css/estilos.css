@@ -6,6 +6,7 @@
   --fuente-principal: 'Open Sans', Arial, Helvetica, sans-serif;
   --fuente-header: 'Inter', Arial, Helvetica, sans-serif;
   --color-primario: #40C1AC;
+  --color-reserva: #ff9800; /* Naranja */
 }
 .bg-modys-primary {
   background-color: var(--modys-primary) !important;
@@ -66,21 +67,25 @@
   color: var(--modys-accent) !important;
   text-shadow: 0 2px 8px rgba(42, 157, 143, 0.15);
 }
+/* Botón RESERVAR CITA naranja */
 .btn-reserva-cita {
-  background: var(--modys-primary);
+  background: var(--color-reserva) !important;
   color: #fff !important;
   border-radius: 50px;
   padding: 10px 28px;
   font-size: 1.1rem;
-  box-shadow: 0 2px 12px rgba(42, 157, 143, 0.15);
+  box-shadow: 0 2px 12px rgba(255, 152, 0, 0.15);
   transition: background 0.2s, box-shadow 0.2s;
+  font-weight: bold;
+  border: none;
 }
 .btn-reserva-cita:hover {
-  background: #21867a;
+  background: #e65100 !important;
   color: #fff !important;
-  box-shadow: 0 4px 24px rgba(42, 157, 143, 0.25);
+  box-shadow: 0 4px 24px rgba(255, 152, 0, 0.25);
   text-decoration: none;
 }
+
 /* Mapa ocupa todo el alto de la tarjeta */
 .card-body.p-0 {
     height: 100%;
