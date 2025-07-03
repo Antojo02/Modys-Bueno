@@ -6,7 +6,7 @@
   --fuente-principal: 'Open Sans', Arial, Helvetica, sans-serif;
   --fuente-header: 'Inter', Arial, Helvetica, sans-serif;
   --color-primario: #40C1AC;
-  --color-reserva: #ff9800; /* Naranja */
+  --color-reserva: #3F4444; /* Naranja */
 }
 .bg-modys-primary {
   background-color: var(--modys-primary) !important;
@@ -243,4 +243,51 @@ header {
 .navbar-nav .nav-item .btn-whatsapp:hover {
     background-color: #1ebe5d;
     color: #fff;
+}
+.btn-primary {
+  background-color: var(--modys-primary) !important;
+  border-color: var(--modys-primary) !important;
+  color: #fff !important;
+  font-weight: 600;
+  transition: background 0.2s, border 0.2s;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #21867a !important; /* Un tono más oscuro para el hover */
+  border-color: #21867a !important;
+  color: #fff !important;
+}
+/* Footer colores personalizados */
+.footer-title {
+  color: #111 !important; /* Negro para títulos: Clínica Modys, Enlaces útiles, Síguenos */
+}
+.footer-info,
+.footer-copy {
+  color: #444 !important; /* Gris oscuro para info de contacto y copyright */
+}
+.footer-link {
+  color: #444 !important; /* Gris oscuro para enlaces */
+  transition: color 0.2s;
+}
+.footer-link:hover {
+  color: #111 !important; /* Negro al pasar el ratón */
+}
+
+/* Header: letras gris oscuro */
+.navbar,
+.navbar .navbar-brand,
+.navbar .nav-link,
+.navbar .nav-strong {
+  color: #222 !important; /* Gris oscuro */
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link,
+.navbar .nav-strong {
+  text-decoration: none !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #111 !important;
 }
