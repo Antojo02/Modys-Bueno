@@ -8,63 +8,66 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link href="css/estilos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
+    
 </head>
 <body>
     <!-- Barra de navegación -->
-   <nav class="navbar navbar-expand-lg navbar-light bg-modys-secondary fixed-top shadow">
-    <div class="container">
-        <a class="navbar-brand d-flex align-items-center gap-2 text-white fw-bold" href="index.html">
-            <img src="img/logo/LOGO.jpg" alt="Logo Clínica Modys" style="height:50px; width:100px; object-fit:contain;">
-            Clínica Modys
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
-                <li class="nav-item">
-                    <a class="nav-link nav-strong" href="index.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-strong" href="servicios.html">Servicios</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-strong" href="personal.html">Personal</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-strong" href="contacto.html">Contacto</a>
-                </li>
-                <li class="nav-item ms-lg-3">
-                    <a class="btn btn-reserva-cita fw-bold rounded-pill px-4 py-2 d-flex align-items-center justify-content-center"
-                       href="reserva.html">Reservar Cita</a>
-                </li>
-                <li class="nav-item ms-lg-2 mt-3 mt-lg-0">
-                    <a class="btn btn-whatsapp fw-bold rounded-pill px-4 py-2 d-flex align-items-center justify-content-center"
-                       href="https://wa.me/34602528124" target="_blank">
-                       <i class="bi bi-whatsapp me-2"></i> 602 528 124
-                    </a>
-                </li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-modys-secondary fixed-top shadow">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2 text-white fw-bold" href="index.html">
+                <img src="img/logo/LOGO.jpg" alt="Logo Clínica Modys" style="height:50px; width:100px; object-fit:contain;">
+                Clínica Modys
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link nav-strong" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-strong" href="servicios.html">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-strong" href="personal.html">Personal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-strong" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-reserva-cita fw-bold rounded-pill px-4 py-2 d-flex align-items-center justify-content-center" href="reserva.html">Reservar Cita</a>
+                    </li>
+                    <li class="nav-item ms-lg-2 mt-3 mt-lg-0">
+                        <a class="btn btn-whatsapp fw-bold rounded-pill px-4 py-2 d-flex align-items-center justify-content-center" href="https://wa.me/34602528124" target="_blank">
+                            <i class="bi bi-whatsapp me-2"></i> 602 528 124
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
+
+    <!-- Header -->
     <header class="text-white text-center d-flex align-items-center position-relative"
         style="min-height: 80vh; background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;">
         <div style="position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:1;"></div>
         <div class="container py-5 position-relative" style="z-index:2;">
-            <h1 class="display-3 fw-bold mb-3">Fisio, salud y nutrición, en Modys hay solución</h1>
+            <h1 id="typewriter" class="display-3 fw-bold mb-3"></h1>
             <p class="lead mb-4">Expertos en Nutrición, Fisioterapia y Deporte en Molina de Segura, Murcia.</p>
             <div class="d-flex justify-content-center gap-3 flex-wrap">
                 <a href="servicios.html" class="btn btn-light cta-btn fw-bold">Conocer Servicios</a>
                 <a href="personal.html" class="btn btn-outline-light cta-btn fw-bold">Nuestro Equipo</a>
-<a href="contacto.html" class="btn btn-modys-primary cta-btn fw-bold">Contactar</a>            </div>
+                <a href="contacto.html" class="btn btn-modys-primary cta-btn fw-bold">Contactar</a>
+            </div>
         </div>
     </header>
 
+    <!-- Bienvenida -->
     <section class="container py-5">
         <div class="row align-items-center">
             <div class="col-md-6 mb-4 mb-md-0">
-                <h2 class="text-modys-secondary fwbold">Bienvenido a Clínica Modys</h2>
+                <h2 class="text-modys-secondary fw-bold">Bienvenido a Clínica Modys</h2>
                 <p>Somos un centro de referencia en salud integral, combinando nutrición, fisioterapia y deporte para ayudarte a alcanzar tu mejor versión. Nuestro equipo multidisciplinar te acompaña en cada paso hacia tu bienestar.</p>
                 <a href="servicios.html" class="btn btn-modys-primary mt-2">Ver todos los servicios</a>
             </div>
@@ -74,6 +77,7 @@
         </div>
     </section>
 
+    <!-- Servicios destacados -->
     <section class="bg-light py-5">
         <div class="container">
             <h3 class="text-center mb-4 text-modys-secondary">Servicios Destacados</h3>
@@ -112,6 +116,7 @@
         </div>
     </section>
 
+    <!-- Testimonios -->
     <section class="container py-5">
         <h2 class="text-center mb-4 text-modys-secondary">Valoraciones de nuestros pacientes</h2>
         <div class="row g-4 justify-content-center">
@@ -122,9 +127,7 @@
                             <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Paciente 1" class="rounded-circle me-3" width="60" height="60">
                             <div>
                                 <h6 class="mb-0 fw-bold">Juan Martínez</h6>
-                                <div class="text-warning fs-5">
-                                    ★★★★★
-                                </div>
+                                <div class="text-warning fs-5">★★★★★</div>
                             </div>
                         </div>
                         <p class="mb-0">Excelente atención y resultados. El equipo es muy profesional y cercano. ¡Recomendado 100%!</p>
@@ -138,9 +141,7 @@
                             <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Paciente 2" class="rounded-circle me-3" width="60" height="60">
                             <div>
                                 <h6 class="mb-0 fw-bold">Ana López</h6>
-                                <div class="text-warning fs-5">
-                                    ★★★★★
-                                </div>
+                                <div class="text-warning fs-5">★★★★★</div>
                             </div>
                         </div>
                         <p class="mb-0">Muy contenta con el trato recibido y la mejora en mi salud. Instalaciones modernas y limpias.</p>
@@ -154,9 +155,7 @@
                             <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Paciente 3" class="rounded-circle me-3" width="60" height="60">
                             <div>
                                 <h6 class="mb-0 fw-bold">Pedro Sánchez</h6>
-                                <div class="text-warning fs-5">
-                                    ★★★★★
-                                </div>
+                                <div class="text-warning fs-5">★★★★★</div>
                             </div>
                         </div>
                         <p class="mb-0">Grandes profesionales. Me ayudaron mucho con mi recuperación. Volveré sin duda.</p>
@@ -166,55 +165,63 @@
         </div>
     </section>
 
-    
+    <!-- Footer -->
     <footer class="bg-modys-secondary footer-text-dark text-center py-4 mt-5">
-    <div class="container">
-        <div class="row align-items-center mb-3">
-            <div class="col-md-4 mb-3 mb-md-0 text-md-start text-center">
-                <a href="index.html" class="navbar-brand d-inline-flex align-items-center gap-2 footer-link fw-bold mb-2" style="font-size:1.3rem;">
-                    <img src="img/logo/LOGO.jpg" alt="Logo Clínica Modys" style="height:38px; width:75px; object-fit:contain;">
-                    Clínica Modys
-                </a>
-                <div class="mt-2 small">
-                    <i class="bi bi-geo-alt-fill me-1"></i> Molina de Segura, Murcia<br>
-                    <i class="bi bi-envelope-fill me-1"></i> info@clinicamodys.es<br>
-                    <i class="bi bi-telephone-fill me-1"></i> 602 528 124
-                </div>
-            </div>
-            <div class="col-md-4 mb-3 mb-md-0">
-                <h6 class="fw-bold mb-3">Enlaces útiles</h6>
-                <ul class="list-unstyled mb-0">
-                    <li><a href="servicios.html" class="footer-link text-decoration-underline">Servicios</a></li>
-                    <li><a href="personal.html" class="footer-link text-decoration-underline">Nuestro Personal</a></li>
-                    <li><a href="reserva.html" class="footer-link text-decoration-underline">Reservar Cita</a></li>
-                    <li><a href="contacto.html" class="footer-link text-decoration-underline">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="col-md-4 text-md-end text-center">
-                <h6 class="fw-bold mb-3">Síguenos</h6>
-                <a href="https://www.instagram.com/modys_deporteysalud/?hl=es" target="_blank" class="footer-link me-2 fs-4" aria-label="Instagram">
-                    <i class="bi bi-instagram"></i>
-                </a>
-                <a href="https://www.facebook.com/Cl%C3%ADnica-Modys-102626885646688" target="_blank" class="footer-link me-2 fs-4" aria-label="Facebook">
-                    <i class="bi bi-facebook"></i>
-                </a>
-                <a href="https://wa.me/34602528124" target="_blank" class="footer-link fs-4" aria-label="WhatsApp">
-                    <i class="bi bi-whatsapp"></i>
-                </a>
-                <div class="mt-3">
-                    <a href="contacto.html" class="btn btn-warning btn-sm fw-bold rounded-pill px-4 py-2 d-inline-flex align-items-center">
-                        <i class="bi bi-envelope-paper me-2"></i> Contacta con nosotros
+        <div class="container">
+            <div class="row align-items-center mb-3">
+                <div class="col-md-4 mb-3 mb-md-0 text-md-start text-center">
+                    <a href="index.html" class="navbar-brand d-inline-flex align-items-center gap-2 footer-link fw-bold mb-2" style="font-size:1.3rem;">
+                        <img src="img/logo/LOGO.jpg" alt="Logo Clínica Modys" style="height:38px; width:75px; object-fit:contain;">
+                        Clínica Modys
                     </a>
+                    <div class="mt-2 small">
+                        <i class="bi bi-geo-alt-fill me-1"></i> Molina de Segura, Murcia<br>
+                        <i class="bi bi-envelope-fill me-1"></i> info@clinicamodys.es<br>
+                        <i class="bi bi-telephone-fill me-1"></i> 602 528 124
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h6 class="fw-bold mb-3">Enlaces útiles</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="index.html" class="footer-link">Inicio</a></li>
+                        <li><a href="servicios.html" class="footer-link">Servicios</a></li>
+                        <li><a href="personal.html" class="footer-link">Nuestro Equipo</a></li>
+                        <li><a href="contacto.html" class="footer-link">Contacto</a></li>
+                        <li><a href="reserva.html" class="footer-link">Reservar Cita</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 text-md-end text-center">
+                    <h6 class="fw-bold mb-3">Síguenos</h6>
+                    <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-5"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-5"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-twitter fs-5"></i></a>
                 </div>
             </div>
+            <div class="text-center small text-white-50">
+                &copy; 2025 Clínica Modys. Todos los derechos reservados.
+            </div>
         </div>
-        <hr class="border-light opacity-25 my-3">
-        <div class="small footer-link">
-            &copy; 2025 Clínica Modys. Todos los derechos reservados. | <a href="politica-privacidad.html" class="footer-link text-decoration-underline">Política de Privacidad</a>
-        </div>
-    </div>
-</footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </footer>
 
+    <!-- Scripts -->
+     <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const text = "Fisio, salud y nutrición, en Modys hay solución";
+    const typewriterElement = document.getElementById("typewriter");
+    let index = 0;
+    
+    function typeWriter() {
+      if (index < text.length) {
+        typewriterElement.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 100); // velocidad de escritura (ms)
+      }
+    }
+    
+    typeWriter();
+  });
+</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
