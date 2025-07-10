@@ -257,21 +257,6 @@ header {
   border-color: #21867a !important;
   color: #fff !important;
 }
-/* Footer colores personalizados */
-.footer-title {
-  color: #111 !important; /* Negro para títulos: Clínica Modys, Enlaces útiles, Síguenos */
-}
-.footer-info,
-.footer-copy {
-  color: #444 !important; /* Gris oscuro para info de contacto y copyright */
-}
-.footer-link {
-  color: #444 !important; /* Gris oscuro para enlaces */
-  transition: color 0.2s;
-}
-.footer-link:hover {
-  color: #111 !important; /* Negro al pasar el ratón */
-}
 
 /* Header: letras gris oscuro */
 .navbar,
