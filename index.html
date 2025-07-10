@@ -221,15 +221,19 @@
             const text = "Fisioterapia, salud y nutrición, en Modys hay solución";
             const typewriterElement = document.getElementById("typewriter");
             let index = 0;
-            
+            let speed = 150; // velocidad inicial (ms)
+            const minSpeed = 50; // velocidad mínima (ms)
+            const step = 5; // cuánto se reduce en cada letra
+
             function typeWriter() {
-            if (index < text.length) {
-                typewriterElement.textContent += text.charAt(index);
-                index++;
-                setTimeout(typeWriter, 100); // velocidad de escritura (ms)
+                if (index < text.length) {
+                    typewriterElement.textContent += text.charAt(index);
+                    index++;
+                    setTimeout(typeWriter, speed);
+                    if (speed > minSpeed) speed -= step;
+                }
             }
-            }
-            
+
             typeWriter();
         });
     </script>
