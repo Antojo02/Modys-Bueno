@@ -2,15 +2,15 @@
    Variables globales
    ========================== */
 :root {
-  --color-embarazo-primario: #fbc2eb;
+  --color-embarazo-primario: #40C1AC;
   --color-embarazo-secundario: #fcdffb;
   --color-embarazo-terciario: #fffde4;
   --color-blanco: #fff;
   --color-texto: #222;
   --color-modys-secondary: #64b3f4;
   --color-pink-btn: #a14b7b;
-  --sombra-principal: 0 16px 48px 0 rgba(255, 195, 160, 0.18), 0 2px 8px 0 rgba(255, 255, 200, 0.13);
-  --sombra-section: 0 16px 56px 0 rgba(255, 195, 160, 0.13), 0 2px 8px 0 rgba(255, 255, 200, 0.10);
+  --sombra-principal: 0 16px 48px 0 rgba(100, 179, 244, 0.25), 0 2px 8px 0 rgba(100, 179, 244, 0.15);
+  --sombra-section: 0 16px 56px 0 rgba(100, 179, 244, 0.15), 0 2px 8px 0 rgba(100, 179, 244, 0.10);
   --radio-borde: 2rem;
 
   /* Fuentes */
@@ -58,10 +58,29 @@ h1, h2, h3, h4, h5, h6, .header, .navbar-brand {
 /* ==========================
    Tarjetas y efectos hover
    ========================== */
-.card-hover:hover {
+.card-servicio {
+  background-color: var(--color-blanco);
+  box-shadow: var(--sombra-section);
+  border-radius: var(--radio-borde);
+  border: none;
+  transition: all 0.3s;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card-servicio:hover {
   transform: translateY(-10px) scale(1.03);
   box-shadow: var(--sombra-principal);
-  transition: all 0.3s;
+}
+
+.card-servicio h3 {
+  color: var(--color-modys-secondary);
+}
+
+.card-servicio i {
+  color: var(--color-modys-secondary);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 /* ==========================
@@ -79,6 +98,29 @@ h1, h2, h3, h4, h5, h6, .header, .navbar-brand {
 
 /* ==========================
    Botón personalizado
+   ========================== */
+.btn-servicio {
+  background-color: var(--color-modys-secondary);
+  color: white;
+  font-weight: bold;
+  font-family: var(--fuente-header);
+  border: none;
+  border-radius: 2rem;
+  padding: 0.75rem 1.5rem;
+  transition: background 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.btn-servicio:hover,
+.btn-servicio:focus {
+  background-color: #333;
+  color: white;
+}
+
+/* ==========================
+   Estilo antiguo del botón rosa (ya no recomendado)
    ========================== */
 .btn-pink {
   background: var(--color-embarazo-primario);
