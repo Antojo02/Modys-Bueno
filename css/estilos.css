@@ -1,54 +1,65 @@
+/* ==========================
+   VARIABLES Y COLORES
+   ========================== */
 :root {
   --modys-primary: #40C1AC;
   --modys-secondary: #1b3c6b;
   --modys-accent: #e9c46a;
-  /* Fuentes */
+  --color-primario: #40C1AC;
+  --color-reserva: #3F4444;
+  --color-fondo-index: #f8fafc;
+  --color-btn-hover: #c69500;
+  --color-btn-light: #f8f9fa;
+  --color-modal-bg: rgba(34, 46, 60, 0.85);
+  --color-modal-shadow: 0 8px 32px rgba(25, 118, 210, 0.10);
+  --borde-radius-btn: 30px;
+  --borde-radius-modal: 1rem;
   --fuente-principal: 'Open Sans', Arial, Helvetica, sans-serif;
   --fuente-header: 'Inter', Arial, Helvetica, sans-serif;
-  --color-primario: #40C1AC;
-  --color-reserva: #3F4444; /* Naranja */
 }
-.bg-modys-primary {
-  background-color: var(--modys-primary) !important;
+
+/* ==========================
+   UTILIDADES DE COLOR Y TEXTO
+   ========================== */
+.bg-modys-primary { background-color: var(--modys-primary) !important; }
+.bg-modys-secondary { background-color: var(--color-primario) !important; }
+.text-modys-primary { color: var(--modys-primary) !important; }
+.text-modys-secondary { color: var(--color-primario) !important; }
+
+/* ==========================
+   FONDO GENERAL DEL INDEX
+   ========================== */
+body {
+  background: var(--color-fondo-index) !important;
 }
-.bg-modys-secondary {
-  background-color: var(--color-primario) !important;
+
+/* ==========================
+   BOTONES
+   ========================== */
+.cta-btn, .btn-modys-primary, .btn-reserva-cita, .navbar-nav .nav-item .btn-whatsapp {
+  border-radius: var(--borde-radius-btn);
+  font-weight: bold;
 }
-.text-modys-primary {
-  color: var(--modys-primary) !important;
+.cta-btn { padding: 10px 30px; transition: transform 0.2s, box-shadow 0.2s; }
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
-.text-modys-secondary {
-  color: var(--color-primario) !important;
+.btn-light.cta-btn:hover {
+  background-color: var(--color-btn-light);
 }
-.cta-btn {
-  border-radius: 30px;
-  padding: 10px 30px;
+.btn-outline-light.cta-btn:hover {
+  background-color: rgba(255,255,255,0.2);
+  border-color: var(--color-btn-light);
+  color: #fff;
 }
-.card-img-top,
-.img-fluid {
-  height: 180px;
-  object-fit: cover;
-}
-.card-img-top.staff-img {
-  height: 500px; /* Más pequeña que antes */
-  object-fit: contain; /* Así se verá entera aunque deje bandas */
-  object-position: center;
-  width: 100%;
-  background: #f5f5f5;
-  border-top-left-radius: 0.75rem;
-  border-top-right-radius: 0.75rem;
-}
-.servicio-card {
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.servicio-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 32px rgba(42, 157, 143, 0.2);
+.btn-warning.cta-btn:hover {
+  background-color: var(--color-btn-hover);
+  color: #fff;
 }
 .btn-modys-primary {
   background: var(--modys-primary);
   color: #fff !important;
-  border-radius: 30px;
   padding: 8px 28px;
   transition: background 0.2s;
   border: none;
@@ -57,192 +68,19 @@
   background: #16305a;
   color: #fff !important;
 }
-.nav-strong {
-  font-weight: bold;
-  letter-spacing: 0.5px;
-  transition: color 0.2s, text-shadow 0.2s;
-}
-.nav-strong:hover,
-.nav-link.active {
-  color: var(--modys-accent) !important;
-  text-shadow: 0 2px 8px rgba(42, 157, 143, 0.15);
-}
-/* Botón RESERVAR CITA naranja */
 .btn-reserva-cita {
   background: var(--color-reserva) !important;
   color: #fff !important;
-  border-radius: 50px;
   padding: 10px 28px;
   font-size: 1.1rem;
   box-shadow: 0 2px 12px rgba(255, 152, 0, 0.15);
   transition: background 0.2s, box-shadow 0.2s;
-  font-weight: bold;
   border: none;
 }
 .btn-reserva-cita:hover {
   background: #e65100 !important;
-  color: #fff !important;
   box-shadow: 0 4px 24px rgba(255, 152, 0, 0.25);
   text-decoration: none;
-}
-
-/* Mapa ocupa todo el alto de la tarjeta */
-.card-body.p-0 {
-    height: 100%;
-    min-height: 320px; /* Puedes ajustar la altura mínima */
-    padding: 0 !important;
-}
-.ratio.ratio-4x3 {
-    height: 100%;
-    min-height: 320px;
-}
-.ratio.ratio-4x3 iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
-    border-radius: 0.75rem;
-    display: block;
-}
-
-/* Animación sutil para la llamada a la acción */
-.animated-cta {
-  animation: pulse 2s infinite;
-  border-left: 6px solid var(--modys-secondary);
-}
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(59,174,212,0.2);}
-  70% { box-shadow: 0 0 0 10px rgba(59,174,212,0);}
-  100% { box-shadow: 0 0 0 0 rgba(59,174,212,0);}
-}
-
-/* Mostrar la imagen completa y centrada en las tarjetas de servicios */
-.card-img-top {
-    height: 300px;
-    object-fit: cover;
-    object-position: center;
-    width: 100%;
-    background: #f8f9fa;
-    border-top-left-radius: 0.75rem;
-    border-top-right-radius: 0.75rem;
-}
-.bg-nutricionista {
-    background-color: #8e44ad !important;
-    color: white;
-}
-
-/* Estilo para el botón toggler en modo móvil */
-.navbar-toggler {
-    border-color: rgba(255, 255, 255, 0.5);
-}
-
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-/* Efecto gris en el header cuando hover en dropdown */
-.navbar .dropdown:hover ~ header::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(240, 240, 240, 0.6);
-    z-index: 2;
-    transition: all 0.3s ease;
-}
-
-/* Ajustamos el header para que tenga position: relative */
-header {
-    position: relative;
-    overflow: hidden;
-}
-
-/* Mega menu 3x3 centrado bonito */
-.navbar .mega-dropdown {
-    width: 750px;
-    padding: 1.5rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: auto;
-    gap: 1rem;
-    background: rgba(240, 240, 240, 0.95);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    border-radius: 12px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: all 0.3s ease;
-    margin: 0 auto;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 10px);
-}
-
-.navbar .dropdown:hover .mega-dropdown {
-    opacity: 1;
-    visibility: visible;
-    transform: translate(-50%, 0);
-    z-index: 3;
-}
-
-/* Estilo de las cajas */
-.navbar .mega-dropdown .dropdown-item {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: #333;
-    border-radius: 8px;
-    text-align: center;
-    padding: 0.75rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    font-size: 0.95rem;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.navbar .mega-dropdown .dropdown-item:hover {
-    background-color: rgba(255, 255, 255, 0.4);
-    color: #0d6efd;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-    transform: scale(1.05);
-}
-
-.navbar-nav .nav-link {
-    font-size: 1.1rem; /* Tamaño uniforme */
-    padding: 0.75rem 1rem; /* Espaciado uniforme */
-    font-weight: 500;
-}
-
-.navbar-nav .btn-reserva-cita {
-    font-size: 1rem; /* Igual tamaño de texto que nav-link */
-    padding: 0.6rem 1.2rem;
-    white-space: nowrap;
-}
-
-.navbar-nav .nav-item .btn-reserva-cita {
-    margin-top: 0.3rem; /* Ajusta alineación con links */
-    margin-bottom: 0.3rem;
-}
-
-.navbar-nav .nav-item .btn-whatsapp {
-    font-size: 1rem;
-    padding: 0.6rem 1.2rem;
-    background-color: #25D366;
-    color: #fff;
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50px;
-    border: none;
-    text-decoration: none;
-}
-
-.navbar-nav .nav-item .btn-whatsapp:hover {
-    background-color: #1ebe5d;
-    color: #fff;
 }
 .btn-primary {
   background-color: var(--modys-primary) !important;
@@ -253,114 +91,397 @@ header {
 }
 .btn-primary:hover,
 .btn-primary:focus {
-  background-color: #21867a !important; /* Un tono más oscuro para el hover */
+  background-color: #21867a !important;
   border-color: #21867a !important;
   color: #fff !important;
 }
-/* Footer colores personalizados */
-.footer-title {
-  color: #111 !important; /* Negro para títulos: Clínica Modys, Enlaces útiles, Síguenos */
+.navbar-nav .nav-item .btn-whatsapp {
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #25D366;
+  color: #fff;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  border: none;
+  text-decoration: none;
 }
-.footer-info,
-.footer-copy {
-  color: #444 !important; /* Gris oscuro para info de contacto y copyright */
-}
-.footer-link {
-  color: #444 !important; /* Gris oscuro para enlaces */
-  transition: color 0.2s;
-}
-.footer-link:hover {
-  color: #111 !important; /* Negro al pasar el ratón */
+.navbar-nav .nav-item .btn-whatsapp:hover {
+  background-color: #1ebe5d;
+  color: #fff;
 }
 
-/* Header: letras gris oscuro */
+/* ==========================
+   NAVBAR Y HEADER
+   ========================== */
+.nav-strong, .navbar-nav .nav-link {
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  font-size: 1.1rem;
+  padding: 0.75rem 1rem;
+  transition: color 0.2s, text-shadow 0.2s;
+}
+.nav-strong:hover,
+.nav-link.active {
+  color: var(--modys-accent) !important;
+  text-shadow: 0 2px 8px rgba(42, 157, 143, 0.15);
+}
 .navbar,
 .navbar .navbar-brand,
 .navbar .nav-link,
 .navbar .nav-strong {
-  color: #222 !important; /* Gris oscuro */
-}
-
-.navbar .navbar-brand,
-.navbar .nav-link,
-.navbar .nav-strong {
+  color: #222 !important;
   text-decoration: none !important;
 }
-
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
   color: #111 !important;
 }
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.navbar-nav .btn-reserva-cita {
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+  white-space: nowrap;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+/* Mega menu 3x3 centrado bonito */
+.navbar .mega-dropdown {
+  width: 750px;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  gap: 1rem;
+  background: rgba(240, 240, 240, 0.95);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, 10px);
+  transition: all 0.3s ease;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+}
+.navbar .dropdown:hover .mega-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+  z-index: 3;
+}
+.navbar .mega-dropdown .dropdown-item {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #333;
+  border-radius: 8px;
+  text-align: center;
+  padding: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar .mega-dropdown .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #0d6efd;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
+}
 
 /* ==========================
-   ESTILOS PARA personal.html
+   TARJETAS Y SERVICIOS
    ========================== */
-
-/* Tarjetas de personal */
+.card-img-top,
+.img-fluid {
+  height: 180px;
+  object-fit: cover;
+}
+.card-img-top {
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  background: #f8f9fa;
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+.card-img-top.staff-img {
+  height: 500px;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  background: #f5f5f5;
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+.servicio-card,
 .personal-card {
   transition: transform 0.3s, box-shadow 0.3s;
 }
+.servicio-card:hover,
 .personal-card:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 32px rgba(42, 157, 143, 0.2);
 }
+.bg-nutricionista {
+  background-color: #8e44ad !important;
+  color: white;
+}
 
-/* Modal de personal */
+/* ==========================
+   MAPA Y TARJETA MAPA
+   ========================== */
+.card-body.p-0 {
+  height: 100%;
+  min-height: 320px;
+  padding: 0 !important;
+}
+.ratio.ratio-4x3 {
+  height: 100%;
+  min-height: 320px;
+}
+.ratio.ratio-4x3 iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 0.75rem;
+  display: block;
+}
+
+/* ==========================
+   FOOTER
+   ========================== */
+.footer-title { color: #111 !important; }
+.footer-info,
+.footer-copy,
+.footer-link { color: #444 !important; transition: color 0.2s; }
+.footer-link:hover { color: #111 !important; }
+
+/* ==========================
+   ANIMACIONES Y EFECTOS
+   ========================== */
+.animated-cta {
+  animation: pulse 2s infinite;
+  border-left: 6px solid var(--modys-secondary);
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(59,174,212,0.2);}
+  70% { box-shadow: 0 0 0 10px rgba(59,174,212,0);}
+  100% { box-shadow: 0 0 0 0 rgba(59,174,212,0);}
+}
+
+/* ==========================
+   PERSONAL.HTML MODAL
+   ========================== */
 .personal-modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .personal-modal.active {
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
 }
 .personal-modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 600px;
-    position: relative;
-    border-radius: 1rem;
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+  border-radius: var(--borde-radius-modal);
 }
 .personal-modal-close {
-    color: #aaa;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
 }
 .personal-modal-close:hover,
 .personal-modal-close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 .personal-modal-img {
-    width: 100%;
-    max-height: 580px;
-    object-fit: cover;
-    margin-bottom: 15px;
+  width: 100%;
+  max-height: 580px;
+  object-fit: cover;
+  margin-bottom: 15px;
 }
 .personal-modal-title {
-    font-size: 24px;
-    margin-bottom: 10px;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 .personal-modal-description {
-    font-size: 16px;
+  font-size: 16px;
 }
-.personal-hover {
+.personal-hover { display: none; }
+
+/* ==========================
+   RESERVA.HTML ESTILOS
+   ========================== */
+   /* ==========================
+   VALIDACIÓN DE FORMULARIO
+   ========================== */
+.form-control.is-invalid {
+    border-color: #dc3545;
+    padding-right: calc(1.5em + .75rem);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5' stroke-width='1'/><path stroke-linecap='round' d='M5.8 3.698V7.5m0 2v-2'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right calc(.375em + .1875rem) center;
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+}
+.form-control.is-valid {
+    border-color: #198754;
+    padding-right: calc(1.5em + .75rem);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.4-2.1 1.4-1.7l1.197.334L6.4 3c.4-1.04 1.63-.86 1.4.33l-5.81 6.08c-.2.08-.42-.15-.28-.32z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(.375em + .1875rem) center;
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+}
+.invalid-feedback {
     display: none;
+    width: 100%;
+    margin-top: .25rem;
+    font-size: .875em;
+    color: #dc3545;
+}
+.is-invalid + .invalid-feedback {
+    display: block;
+}
+
+/* ==========================
+   EFECTOS DE NAVEGACIÓN Y BOTONES
+   ========================== */
+.navbar-nav .nav-link:hover {
+    color: #f8f9fa !important;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.btn-reserva-cita:hover {
+    background-color: #0a6b38 !important;
+    transform: scale(1.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Efecto hover en el botón de contacto del CTA */
+.animated-cta .btn-modys-primary:hover {
+    background-color: #003366 !important;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* ==========================
+   CTA ANIMADO
+   ========================== */
+.animated-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.animated-cta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+.animated-cta h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #333;
+}
+.animated-cta p {
+    margin-bottom: 20px;
+    color: #666;
+}
+.animated-cta .btn-modys-primary {
+    margin-top: 10px;
+}
+
+/* ==========================
+   PERSONAL.HTML SCROLL CARDS
+   ========================== */
+.personal-scroll-container {
+    position: relative;
+}
+
+.personal-scroll {
+    scroll-behavior: smooth;
+    padding-bottom: 1rem;
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.scroll-btn:hover {
+    background-color: rgba(200, 200, 200, 0.8);
+}
+
+.scroll-btn.left {
+    left: -10px;
+}
+
+.scroll-btn.right {
+    right: -10px;
+}
+
+.personal-card {
+    min-width: 250px;
+    flex: 0 0 auto;
+}
+
+/* ==========================
+   RESPONSIVE
+   ========================== */
+@media (max-width: 768px) {
+    .btn-reserva-cita {
+        width: 100%;
+        padding: 12px;
+        font-size: 1.2rem;
+    }
+    .navbar-nav .nav-link {
+        font-size: 1.1rem;
+    }
 }

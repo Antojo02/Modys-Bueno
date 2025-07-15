@@ -102,31 +102,31 @@
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-  const formContacto = document.querySelector('form.mb-4');
-  const nombreInput = document.getElementById('nombre');
-  const correoInput = document.getElementById('correo');
-  const mensajeInput = document.getElementById('mensaje');
+   <script>
+        const formContacto = document.querySelector('form.mb-4');
+        const nombreInput = document.getElementById('nombre');
+        const correoInput = document.getElementById('correo');
+        const mensajeInput = document.getElementById('mensaje');
 
-  // Crear el div de confirmación si no existe
-  let confirmacionContacto = document.getElementById('confirmacion-contacto');
-  if (!confirmacionContacto) {
-    confirmacionContacto = document.createElement('div');
-    confirmacionContacto.id = 'confirmacion-contacto';
-    confirmacionContacto.className = 'mt-4 alert alert-success d-none';
-    formContacto.parentNode.appendChild(confirmacionContacto);
-  }
+        // Crear el div de confirmación si no existe
+        let confirmacionContacto = document.getElementById('confirmacion-contacto');
+        if (!confirmacionContacto) {
+            confirmacionContacto = document.createElement('div');
+            confirmacionContacto.id = 'confirmacion-contacto';
+            confirmacionContacto.className = 'mt-4 alert alert-success d-none';
+            formContacto.parentNode.appendChild(confirmacionContacto);
+        }
 
-  formContacto.addEventListener('submit', function (e) {
-    e.preventDefault();
+        formContacto.addEventListener('submit', function (e) {
+            e.preventDefault();
 
-    const nombre = nombreInput.value;
-    confirmacionContacto.classList.remove('d-none');
-    confirmacionContacto.innerHTML = `¡Gracias, <strong>${nombre}</strong>! Hemos recibido tu mensaje y te responderemos lo antes posible.`;
+            const nombre = nombreInput.value;
+            confirmacionContacto.classList.remove('d-none');
+            confirmacionContacto.innerHTML = `¡Gracias, <strong>${nombre}</strong>! Hemos recibido tu mensaje y te responderemos lo antes posible.`;
 
-    formContacto.reset();
-  });
-</script>
+            formContacto.reset();
+        });
+   </script>
 <!-- Footer -->
   <footer class="bg-modys-secondary text-center py-4 mt-5 footer-text-dark">
     <div class="container">
@@ -146,7 +146,7 @@
                 <h6 class="fw-bold mb-3 footer-title">Enlaces útiles</h6>
                <ul class="list-unstyled mb-0">
                     <li><a href="servicios.html" class="footer-link text-decoration-none">Servicios</a></li>
-                    <li><a href="personal.html" class="footer-link text-decoration-none">Nuestro Personal</a></li>
+                    <li><a href="personal.html" class="footer-link text-decoration-none">Nuestro Equipo</a></li>
                     <li><a href="reserva.html" class="footer-link text-decoration-none">Reservar Cita</a></li>
                     <li><a href="contacto.html" class="footer-link text-decoration-none">Contacto</a></li>
                 </ul>
