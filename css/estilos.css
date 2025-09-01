@@ -485,3 +485,31 @@ body {
         font-size: 1.1rem;
     }
 }
+/* Reglas para impresión */
+@media print {
+  /* Tamaño del papel */
+  @page {
+    size: A4;
+    margin: 20mm;
+  }
+
+  /* Mantener fondos y colores */
+  body {
+    -webkit-print-color-adjust: exact !important; /* Chrome, Safari */
+    print-color-adjust: exact !important;         /* Firefox */
+    background: inherit !important;
+    color: inherit !important;
+    font-size: 12pt;
+  }
+
+  /* Asegurar que los fondos de divs, secciones, etc. se conserven */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Evita cortes feos en títulos y bloques */
+  h1, h2, h3, p, div, section {
+    page-break-inside: avoid;
+  }
+}
